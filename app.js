@@ -1,32 +1,32 @@
-const buttons = [...document.querySelectorAll('[data-concept]')];
+const root = document.documentElement;
 const panels = [...document.querySelectorAll('[data-panel]')];
-const note = document.querySelector('#concept-note');
+const conceptButtons = [...document.querySelectorAll('[data-concept]')];
+const themeButton = document.querySelector('.theme-toggle');
+const themeMeta = document.querySelector('meta[name="theme-color"]');
 
-const descriptions = {
-  rebuild: 'A faithful, refined modernization',
-  reimagine: 'An editorial product-leadership statement',
-};
-
-function showConcept(name, updateHash = true) {
-  const selected = panels.some((panel) => panel.dataset.panel === name) ? name : 'rebuild';
-
+function selectConcept(name, updateHash = true) {
+  const selected = panels.some((panel) => panel.dataset.panel === name) ? name : 'space';
   panels.forEach((panel) => {
     const active = panel.dataset.panel === selected;
-    panel.classList.toggle('is-visible', active);
+    panel.classList.toggle('is-active', active);
     panel.setAttribute('aria-hidden', String(!active));
   });
-
-  buttons.forEach((button) => {
-    const active = button.dataset.concept === selected;
-    button.classList.toggle('is-active', active);
-    button.setAttribute('aria-pressed', String(active));
-  });
-
-  note.textContent = descriptions[selected];
-  document.documentElement.style.backgroundColor = selected === 'reimagine' ? '#101b24' : '#f5f3ee';
+  conceptButtons.forEach((button) => button.setAttribute('aria-pressed', String(button.dataset.concept === selected)));
   if (updateHash) history.replaceState(null, '', `#${selected}`);
   window.scrollTo({ top: 0, behavior: 'instant' });
 }
 
-buttons.forEach((button) => button.addEventListener('click', () => showConcept(button.dataset.concept)));
-showConcept(location.hash.slice(1), false);
+function setTheme(theme) {
+  const dark = theme === 'dark';
+  root.dataset.theme = dark ? 'dark' : 'light';
+  themeButton.setAttribute('aria-pressed', String(dark));
+  themeButton.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
+  themeMeta.setAttribute('content', dark ? '#111317' : '#ffffff');
+  localStorage.setItem('portfolio-theme', dark ? 'dark' : 'light');
+}
+
+conceptButtons.forEach((button) => button.addEventListener('click', () => selectConcept(button.dataset.concept)));
+themeButton.addEventListener('click', () => setTheme(root.dataset.theme === 'dark' ? 'light' : 'dark'));
+
+selectConcept(location.hash.slice(1), false);
+setTheme(localStorage.getItem('portfolio-theme') || 'light');
