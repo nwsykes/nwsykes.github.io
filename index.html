@@ -3,158 +3,107 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Three white-first design directions for a rebuilt Nick Sykes portfolio." />
+    <meta name="description" content="Nick Sykes — product creator, strategist, and design thinker." />
     <meta name="theme-color" content="#ffffff" />
-    <title>Nick Sykes — Portfolio Directions</title>
+    <title>Nick Sykes</title>
     <link rel="preconnect" href="https://cdn.myportfolio.com" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header class="concept-dock">
-      <div class="concept-dock__label"><span>Nick Sykes</span><small>Portfolio directions</small></div>
-      <nav class="concept-tabs" aria-label="Choose a design direction">
-        <button type="button" data-concept="space" aria-pressed="true"><i>01</i><span>White Space</span></button>
-        <button type="button" data-concept="notes" aria-pressed="false"><i>02</i><span>Field Notes</span></button>
-        <button type="button" data-concept="index" aria-pressed="false"><i>03</i><span>Product Index</span></button>
+    <header class="site-header">
+      <nav class="primary-nav" aria-label="Portfolio sections">
+        <button type="button" data-view="videos" aria-pressed="true">Videos</button>
+        <button type="button" data-view="projects" aria-pressed="false">Projects</button>
+        <button type="button" data-view="resume" aria-pressed="false">Resume</button>
       </nav>
-      <button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">
-        <span class="theme-toggle__sun">Light</span><span class="theme-toggle__moon">Dark</span><i aria-hidden="true"></i>
-      </button>
+
+      <a class="wordmark" href="#videos" data-home aria-label="Nick Sykes home">Nick Sykes</a>
+
+      <div class="header-actions">
+        <a href="https://www.linkedin.com/in/nwsykes/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 8.25H3V21h3.5V8.25ZM4.75 3A2.05 2.05 0 1 0 4.75 7.1 2.05 2.05 0 0 0 4.75 3ZM21 13.7c0-3.84-2.05-5.63-4.79-5.63-2.2 0-3.19 1.21-3.74 2.06V8.25H9V21h3.47v-6.32c0-1.67.32-3.29 2.4-3.29 2.05 0 2.08 1.92 2.08 3.4V21H21v-7.3Z" /></svg>
+        </a>
+        <a href="https://www.instagram.com/nwsykes/" target="_blank" rel="noreferrer" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M7.4 2h9.2A5.4 5.4 0 0 1 22 7.4v9.2a5.4 5.4 0 0 1-5.4 5.4H7.4A5.4 5.4 0 0 1 2 16.6V7.4A5.4 5.4 0 0 1 7.4 2Zm-.18 2A3.22 3.22 0 0 0 4 7.22v9.56A3.22 3.22 0 0 0 7.22 20h9.56A3.22 3.22 0 0 0 20 16.78V7.22A3.22 3.22 0 0 0 16.78 4H7.22ZM12 7.14A4.86 4.86 0 1 1 12 16.86 4.86 4.86 0 0 1 12 7.14Zm0 2A2.86 2.86 0 1 0 12 14.86 2.86 2.86 0 0 0 12 9.14Zm5.1-3.5a1.14 1.14 0 1 1 0 2.28 1.14 1.14 0 0 1 0-2.28Z" /></svg>
+        </a>
+        <a href="mailto:nwsykes@gmail.com" aria-label="Email Nick">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 5h19v14h-19V5Zm2.12 2 7.38 5.3L19.38 7H4.62ZM19.5 9.46l-7.5 5.39-7.5-5.39V17h15V9.46Z" /></svg>
+        </a>
+        <button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false"><span aria-hidden="true"></span></button>
+      </div>
+
+      <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
     </header>
 
     <main>
-      <section class="concept concept--space is-active" data-panel="space">
-        <header class="ws-header ws-shell">
-          <a class="ws-logo" href="#space" aria-label="Nick Sykes home">NS<span>.</span></a>
-          <p>Product leader, designer<br />&amp; persistent maker</p>
-          <nav aria-label="White Space navigation"><a href="#ws-work">Work</a><a href="#ws-profile">Profile</a><a href="mailto:nwsykes@gmail.com">Contact</a></nav>
-        </header>
-
-        <section class="ws-hero ws-shell" id="space" aria-labelledby="ws-title">
-          <div class="ws-hero__title">
-            <p>Based in Utah · Working everywhere</p>
-            <h1 id="ws-title">Nick<br />Sykes</h1>
-          </div>
-          <div class="ws-hero__statement">
-            <span class="ws-rule"></span>
-            <p>I bridge art, engineering, and business to turn complicated problems into useful products.</p>
-            <a href="#ws-work">Selected work <span>↓</span></a>
-          </div>
-          <figure class="ws-hero__image">
-            <img src="https://cdn.myportfolio.com/e2cc5b27-9f9e-4849-a78f-b06395dbbbc8/2f543fd8-9e2e-4036-a75a-34dfd9014c19_rwc_0x0x2341x1320x1280.jpeg?h=9df9befe781a8e3c8debd59f98cd234b" alt="Customer field research in a restoration warehouse" />
-            <figcaption><span>Frontline Obsession</span><span>Customer research / 2023</span></figcaption>
-          </figure>
-        </section>
-
-        <section class="ws-work ws-shell" id="ws-work" aria-labelledby="ws-work-title">
-          <header class="ws-section-head"><span>01 / Selected work</span><h2 id="ws-work-title">Projects with a point of view.</h2><p>Product strategy, applied AI, customer research, visual storytelling, and creative practice.</p></header>
-          <div class="ws-grid">
-            <a class="ws-project ws-project--hero" href="https://nicksykes.myportfolio.com/insights" target="_blank" rel="noreferrer">
-              <figure><img src="https://cdn.myportfolio.com/e2cc5b27-9f9e-4849-a78f-b06395dbbbc8/54c9fc41-6972-415a-8834-7c497adf7d8c_rwc_0x86x2704x1524x1280.png?h=7302d371520369f62bd33a886ca698ce" alt="Insights analytics product on a laptop" /></figure>
-              <div><p>Enterprise strategy · AI</p><h3>Insights</h3><time>2024</time><span>View case study ↗</span></div>
-            </a>
-            <a class="ws-project" href="https://nicksykes.myportfolio.com/sundaysketches" target="_blank" rel="noreferrer">
-              <figure><img src="https://cdn.myportfolio.com/e2cc5b27-9f9e-4849-a78f-b06395dbbbc8/f5ada2d8-6fb1-4c0f-a986-ccd0ffa86da2_rwc_0x86x2704x1524x1280.png?h=23ad79b2f83caad62a2d330e47ac37b0" alt="Sunday Sketches illustrated newspaper" /></figure>
-              <div><p>Illustration · Personal</p><h3>Sunday Sketches</h3><time>2025</time><span>Open gallery ↗</span></div>
-            </a>
-            <a class="ws-project" href="https://nicksykes.myportfolio.com/object-recognition" target="_blank" rel="noreferrer">
-              <figure><img src="https://cdn.myportfolio.com/e2cc5b27-9f9e-4849-a78f-b06395dbbbc8/8376c900-e4df-469c-b0fd-924bea8b341d_rwc_0x86x2704x1524x1280.png?h=b2712340cb6abb7a7084ec1a8c6dd51d" alt="Object recognition product interface on a tablet" /></figure>
-              <div><p>Applied AI · Mobile</p><h3>Object Recognition</h3><time>2021</time><span>View case study ↗</span></div>
-            </a>
-          </div>
-        </section>
-
-        <section class="ws-profile ws-shell" id="ws-profile">
-          <span>02 / Profile</span>
-          <blockquote>“Good product leadership makes the difficult feel obvious.”</blockquote>
-          <div><p>My work spans product strategy, enterprise software, applied AI, field research, film, and illustration.</p><a href="mailto:nwsykes@gmail.com">Start a conversation ↗</a></div>
-        </section>
-
-        <footer class="ws-footer ws-shell"><strong>NS<span>.</span></strong><p>Product creator · Strategist · Design thinker</p><p>LinkedIn · Instagram · Email</p></footer>
+      <section class="view is-active" data-panel="videos" aria-labelledby="videos-title">
+        <h1 class="sr-only" id="videos-title">Videos</h1>
+        <div class="work-grid">
+          <a class="work-card" href="https://nicksykes.myportfolio.com/frontline-obsession" target="_blank" rel="noreferrer">
+            <figure><img src="https://cdn.myportfolio.com/e2cc5b27-9f9e-4849-a78f-b06395dbbbc8/2f543fd8-9e2e-4036-a75a-34dfd9014c19_rwc_0x0x2341x1320x1280.jpeg?h=9df9befe781a8e3c8debd59f98cd234b" alt="Restoration professionals walking through a warehouse" /><figcaption><strong>Frontline Obsession</strong><time>2023</time></figcaption></figure>
+            <div class="mobile-caption"><strong>Frontline Obsession</strong><time>2023</time></div>
+          </a>
+          <a class="work-card" href="https://nicksykes.myportfolio.com/xr-sticky-train" target="_blank" rel="noreferrer">
+            <figure><img src="https://cdn.myportfolio.com/e2cc5b27-9f9e-4849-a78f-b06395dbbbc8/a21d8d24-b275-414a-a986-df265dbed9b4_rwc_0x0x2341x1320x1280.jpeg?h=51baed5fcab4f33228ae0c3728f56da7" alt="A couple featured in the XactRemodel campaign" /><figcaption><strong>XactRemodel “Sticky Training” Series</strong><time>2023</time></figcaption></figure>
+            <div class="mobile-caption"><strong>XactRemodel “Sticky Training” Series</strong><time>2023</time></div>
+          </a>
+          <a class="work-card" href="https://nicksykes.myportfolio.com/21-apple-insurance-summit" target="_blank" rel="noreferrer">
+            <figure><img src="https://cdn.myportfolio.com/e2cc5b27-9f9e-4849-a78f-b06395dbbbc8/5bb636c2-8b52-44e5-bebe-421e9ac0a2f4_rwc_0x0x3949x2226x1280.png?h=66bb1d50728e12d73ca20382855a916d" alt="Apple Insurance Summit product demonstration" /><figcaption><strong>Apple Insurance Summit</strong><time>2021</time></figcaption></figure>
+            <div class="mobile-caption"><strong>Apple Insurance Summit</strong><time>2021</time></div>
+          </a>
+          <a class="work-card" href="https://nicksykes.myportfolio.com/now-next-future-xactimate-desktop-q2-2018" target="_blank" rel="noreferrer">
+            <figure><img src="https://cdn.myportfolio.com/e2cc5b27-9f9e-4849-a78f-b06395dbbbc8/fd16530c-f212-4a50-8845-955af6c32366_rwc_0x0x2203x1242x1280.png?h=5110d89cd513aa2ac17ad1b670b20f8c" alt="Xactimate desktop roadmap presentation" /><figcaption><strong>’19 Now, Next, Future: Desktop</strong><time>2019</time></figcaption></figure>
+            <div class="mobile-caption"><strong>’19 Now, Next, Future: Desktop</strong><time>2019</time></div>
+          </a>
+          <a class="work-card" href="https://nicksykes.myportfolio.com/now-next-future-xactimate-mobile-q2-2018" target="_blank" rel="noreferrer">
+            <figure><img src="https://cdn.myportfolio.com/e2cc5b27-9f9e-4849-a78f-b06395dbbbc8/db337bdb-a4e7-4ee9-90b9-42f9afe5b0a5_rwc_19x0x2168x1222x1280.png?h=57b2556753348e34acb9e7156e6b628f" alt="Xactimate mobile roadmap presentation" /><figcaption><strong>’19 Now, Next, Future: Mobile</strong><time>2019</time></figcaption></figure>
+            <div class="mobile-caption"><strong>’19 Now, Next, Future: Mobile</strong><time>2019</time></div>
+          </a>
+          <a class="work-card" href="https://nicksykes.myportfolio.com/now-next-future-desktop-18" target="_blank" rel="noreferrer">
+            <figure><img src="https://cdn.myportfolio.com/e2cc5b27-9f9e-4849-a78f-b06395dbbbc8/639f6349-8abf-463b-8ab2-93ac2e6dfcb3_rwc_0x12x2700x1521x1280.png?h=db76632931c8bcbfd3bbafdac97424b5" alt="2018 Xactimate desktop roadmap" /><figcaption><strong>’18 Now, Next, Future: Desktop</strong><time>2018</time></figcaption></figure>
+            <div class="mobile-caption"><strong>’18 Now, Next, Future: Desktop</strong><time>2018</time></div>
+          </a>
+          <a class="work-card" href="https://nicksykes.myportfolio.com/copy-of-now-next-future-desktop-18" target="_blank" rel="noreferrer">
+            <figure><img src="https://cdn.myportfolio.com/e2cc5b27-9f9e-4849-a78f-b06395dbbbc8/508c0c10-138d-4206-acac-20932bf59977_rwc_12x0x2682x1512x1280.png?h=aa0bc7a503d52ea4f6695008e3099ad9" alt="2018 Xactimate mobile roadmap" /><figcaption><strong>’18 Now, Next, Future: Mobile</strong><time>2018</time></figcaption></figure>
+            <div class="mobile-caption"><strong>’18 Now, Next, Future: Mobile</strong><time>2018</time></div>
+          </a>
+          <a class="work-card" href="https://nicksykes.myportfolio.com/xactimate-desktop-x1-introduction" target="_blank" rel="noreferrer">
+            <figure><img src="https://cdn.myportfolio.com/e2cc5b27-9f9e-4849-a78f-b06395dbbbc8/5ca465fa-73f8-48a9-bec6-22ff3d972ef4_rwc_31x0x3502x1974x1280.png?h=080bb9aa60925006a2c2a528505270f4" alt="Xactimate X1 product teaser" /><figcaption><strong>Xactimate X1 Teaser</strong><time>2016</time></figcaption></figure>
+            <div class="mobile-caption"><strong>Xactimate X1 Teaser</strong><time>2016</time></div>
+          </a>
+        </div>
       </section>
 
-      <section class="concept concept--notes" data-panel="notes" aria-hidden="true">
-        <header class="fn-header fn-shell">
-          <a href="#notes" class="fn-name">Nick Sykes</a>
-          <p>Field notes from product, design, and the work between.</p>
-          <nav aria-label="Field Notes navigation"><a href="#fn-stories">Stories</a><a href="#fn-about">About</a><a href="mailto:nwsykes@gmail.com">Say hello</a></nav>
-        </header>
-
-        <section class="fn-hero fn-shell" id="notes" aria-labelledby="fn-title">
-          <aside><span>Vol. 01</span><span>Utah / 2026</span><span>Product &amp; creative practice</span></aside>
-          <div class="fn-hero__copy">
-            <p class="fn-kicker">A portfolio of useful ideas</p>
-            <h1 id="fn-title">Drawn from<br /><em>the real world.</em></h1>
-            <p>I lead products by getting close to the work: listening carefully, prototyping visibly, and keeping the story clear enough for teams to move.</p>
-          </div>
-          <figure class="fn-hero__main-image">
-            <img src="https://cdn.myportfolio.com/e2cc5b27-9f9e-4849-a78f-b06395dbbbc8/2f543fd8-9e2e-4036-a75a-34dfd9014c19_rwc_0x0x2341x1320x1280.jpeg?h=9df9befe781a8e3c8debd59f98cd234b" alt="Restoration professionals walking through a warehouse during field research" />
-            <figcaption>On the frontline with customers · Carlsbad, California</figcaption>
-          </figure>
-          <figure class="fn-hero__cutout">
-            <img src="https://cdn.myportfolio.com/e2cc5b27-9f9e-4849-a78f-b06395dbbbc8/f5ada2d8-6fb1-4c0f-a986-ccd0ffa86da2_rwc_0x86x2704x1524x1280.png?h=23ad79b2f83caad62a2d330e47ac37b0" alt="Sunday Sketches illustrated newspaper" />
-            <figcaption>A weekly creative practice</figcaption>
-          </figure>
-        </section>
-
-        <section class="fn-stories fn-shell" id="fn-stories" aria-labelledby="fn-stories-title">
-          <header><p class="fn-kicker">Selected stories</p><h2 id="fn-stories-title">Work worth<br />telling well.</h2></header>
-          <article class="fn-feature">
-            <a href="https://nicksykes.myportfolio.com/insights" target="_blank" rel="noreferrer">
-              <figure><img src="https://cdn.myportfolio.com/e2cc5b27-9f9e-4849-a78f-b06395dbbbc8/54c9fc41-6972-415a-8834-7c497adf7d8c_rwc_0x86x2704x1524x1280.png?h=7302d371520369f62bd33a886ca698ce" alt="Insights business intelligence interface" /></figure>
-              <div><span>Story 01 · Enterprise product strategy</span><h3>Turning operational noise into useful signals.</h3><p>How Insights brought embedded analytics and natural-language exploration into the property workflow.</p><i>Read the story ↗</i></div>
-            </a>
-          </article>
-          <div class="fn-story-pair">
-            <article><a href="https://nicksykes.myportfolio.com/object-recognition" target="_blank" rel="noreferrer"><span>Story 02 · Applied AI</span><h3>From hack-week experiment to a field-ready product.</h3><p>Object Recognition / 2021</p><i>Explore ↗</i></a></article>
-            <article><a href="https://nicksykes.myportfolio.com/my-startup-jot-bot" target="_blank" rel="noreferrer"><span>Story 03 · Founder story</span><h3>Making it easier to remember a life well lived.</h3><p>Jot Bot / 2022</p><i>Explore ↗</i></a></article>
-          </div>
-        </section>
-
-        <section class="fn-about fn-shell" id="fn-about">
-          <p class="fn-kicker">The editor’s note</p>
-          <h2>Product leadership is equal parts curiosity, clarity, and craft.</h2>
-          <p>This direction treats each project as an authored story. It creates room for voice, process, and personal work without making the portfolio feel like a corporate résumé.</p>
-          <a href="mailto:nwsykes@gmail.com">Write to Nick ↗</a>
-        </section>
-
-        <footer class="fn-footer fn-shell"><p>Nick Sykes · Portfolio</p><p>Product / Design / Film / Illustration</p><p>Issue No. 01</p></footer>
+      <section class="view" data-panel="projects" aria-labelledby="projects-title" aria-hidden="true">
+        <h1 class="sr-only" id="projects-title">Projects</h1>
+        <div class="work-grid">
+          <a class="work-card" href="https://nicksykes.myportfolio.com/sundaysketches" target="_blank" rel="noreferrer"><figure><img src="https://cdn.myportfolio.com/e2cc5b27-9f9e-4849-a78f-b06395dbbbc8/f5ada2d8-6fb1-4c0f-a986-ccd0ffa86da2_rwc_0x86x2704x1524x1280.png?h=23ad79b2f83caad62a2d330e47ac37b0" alt="Sunday Sketches illustrated newspaper" /><figcaption><strong>Sunday Sketches</strong><time>2025</time></figcaption></figure><div class="mobile-caption"><strong>Sunday Sketches</strong><time>2025</time></div></a>
+          <a class="work-card" href="https://nicksykes.myportfolio.com/insights" target="_blank" rel="noreferrer"><figure><img src="https://cdn.myportfolio.com/e2cc5b27-9f9e-4849-a78f-b06395dbbbc8/54c9fc41-6972-415a-8834-7c497adf7d8c_rwc_0x86x2704x1524x1280.png?h=7302d371520369f62bd33a886ca698ce" alt="Insights analytics displayed on a laptop" /><figcaption><strong>Insights</strong><time>2024</time></figcaption></figure><div class="mobile-caption"><strong>Insights</strong><time>2024</time></div></a>
+          <a class="work-card" href="https://nicksykes.myportfolio.com/my-startup-jot-bot" target="_blank" rel="noreferrer"><figure><img src="https://cdn.myportfolio.com/e2cc5b27-9f9e-4849-a78f-b06395dbbbc8/14556d54-0286-4a8d-a54f-36986c32dedf_rwc_0x86x2704x1524x1280.png?h=457a9fecf666ba9e3f76c7ecea33f9f4" alt="Jot Bot mobile journaling product" /><figcaption><strong>My First Tech Startup: Jot Bot</strong><time>2022</time></figcaption></figure><div class="mobile-caption"><strong>My First Tech Startup: Jot Bot</strong><time>2022</time></div></a>
+          <a class="work-card" href="https://nicksykes.myportfolio.com/object-recognition" target="_blank" rel="noreferrer"><figure><img src="https://cdn.myportfolio.com/e2cc5b27-9f9e-4849-a78f-b06395dbbbc8/8376c900-e4df-469c-b0fd-924bea8b341d_rwc_0x86x2704x1524x1280.png?h=b2712340cb6abb7a7084ec1a8c6dd51d" alt="Object recognition on a tablet" /><figcaption><strong>Object Recognition</strong><time>2021</time></figcaption></figure><div class="mobile-caption"><strong>Object Recognition</strong><time>2021</time></div></a>
+          <a class="work-card" href="https://nicksykes.myportfolio.com/online-admin" target="_blank" rel="noreferrer"><figure><img src="https://cdn.myportfolio.com/e2cc5b27-9f9e-4849-a78f-b06395dbbbc8/892b679e-5693-4811-b56a-4b80d9673e6b_rwc_0x55x2427x1367x1280.png?h=1ac4d22811c8786374421b0287f6e1fa" alt="Online Admin enterprise interface" /><figcaption><strong>Online Admin</strong><time>2020</time></figcaption></figure><div class="mobile-caption"><strong>Online Admin</strong><time>2020</time></div></a>
+          <a class="work-card" href="https://nicksykes.myportfolio.com/suggested-items" target="_blank" rel="noreferrer"><figure><img src="https://cdn.myportfolio.com/e2cc5b27-9f9e-4849-a78f-b06395dbbbc8/97e1764f-d9f3-4685-b9fb-da10f39eeffb_rwc_0x85x2701x1522x1280.png?h=670569b16e5d455639efd1e66216baa3" alt="Suggested Items product experience" /><figcaption><strong>Suggested Items</strong><time>2020</time></figcaption></figure><div class="mobile-caption"><strong>Suggested Items</strong><time>2020</time></div></a>
+          <a class="work-card" href="https://nicksykes.myportfolio.com/manager-effectiveness-playing-cards" target="_blank" rel="noreferrer"><figure><img src="https://cdn.myportfolio.com/e2cc5b27-9f9e-4849-a78f-b06395dbbbc8/042165b5-891f-455c-8398-86b601a54e97_rwc_0x272x3000x1690x1280.png?h=5e7eca886e07bf05518e1c21c63e7c16" alt="Manager effectiveness playing cards" /><figcaption><strong>Manager Effectiveness: Playing Cards</strong><time>2020</time></figcaption></figure><div class="mobile-caption"><strong>Manager Effectiveness: Playing Cards</strong><time>2020</time></div></a>
+          <a class="work-card" href="https://nicksykes.myportfolio.com/disto-laser-measuring" target="_blank" rel="noreferrer"><figure><img src="https://cdn.myportfolio.com/e2cc5b27-9f9e-4849-a78f-b06395dbbbc8/225c5f97-46e2-40f6-8409-9b5151b98dce_rwc_0x85x2701x1522x1280.png?h=413f14db1440167d13f0ba53d9c98c65" alt="Laser measuring integration" /><figcaption><strong>Laser Measuring Integration</strong><time>2015</time></figcaption></figure><div class="mobile-caption"><strong>Laser Measuring Integration</strong><time>2015</time></div></a>
+        </div>
       </section>
 
-      <section class="concept concept--index" data-panel="index" aria-hidden="true">
-        <header class="pi-header pi-shell">
-          <a class="pi-monogram" href="#index">N/S</a>
-          <div class="pi-status"><i></i><span>Product leadership<br />Creative practice</span></div>
-          <nav aria-label="Product Index navigation"><a href="#pi-work">Index</a><a href="#pi-method">Method</a><a href="mailto:nwsykes@gmail.com">Contact ↗</a></nav>
-        </header>
-
-        <section class="pi-hero pi-shell" id="index" aria-labelledby="pi-title">
-          <div class="pi-hero__meta"><span>01</span><p>Nick Sykes<br />Portfolio archive<br />2006—2025</p></div>
-          <div class="pi-hero__copy"><p>Product creator · Strategist · Design thinker</p><h1 id="pi-title">Ideas are easy.<br /><em>Making them useful</em><br />is the work.</h1></div>
-          <div class="pi-capabilities"><span>Product strategy</span><span>Applied AI</span><span>Enterprise platforms</span><span>Customer research</span><span>Design</span><span>Storytelling</span></div>
-        </section>
-
-        <section class="pi-index pi-shell" id="pi-work" aria-labelledby="pi-work-title">
-          <header><span>02 / Work index</span><h2 id="pi-work-title">Selected projects</h2><p>Filter-free on purpose. Scan the range, then follow the signal.</p></header>
-          <div class="pi-table" role="list">
-            <a role="listitem" href="https://nicksykes.myportfolio.com/sundaysketches" target="_blank" rel="noreferrer"><span class="pi-num">01</span><strong>Sunday Sketches</strong><span>Illustration / Personal</span><time>2025</time><i>↗</i><figure><img src="https://cdn.myportfolio.com/e2cc5b27-9f9e-4849-a78f-b06395dbbbc8/f5ada2d8-6fb1-4c0f-a986-ccd0ffa86da2_rwc_0x86x2704x1524x1280.png?h=23ad79b2f83caad62a2d330e47ac37b0" alt="" /></figure></a>
-            <a role="listitem" href="https://nicksykes.myportfolio.com/insights" target="_blank" rel="noreferrer"><span class="pi-num">02</span><strong>Insights</strong><span>Product strategy / AI</span><time>2024</time><i>↗</i><figure><img src="https://cdn.myportfolio.com/e2cc5b27-9f9e-4849-a78f-b06395dbbbc8/54c9fc41-6972-415a-8834-7c497adf7d8c_rwc_0x86x2704x1524x1280.png?h=7302d371520369f62bd33a886ca698ce" alt="" /></figure></a>
-            <a role="listitem" href="https://nicksykes.myportfolio.com/frontline-obsession" target="_blank" rel="noreferrer"><span class="pi-num">03</span><strong>Frontline Obsession</strong><span>Research / Film</span><time>2023</time><i>↗</i><figure><img src="https://cdn.myportfolio.com/e2cc5b27-9f9e-4849-a78f-b06395dbbbc8/2f543fd8-9e2e-4036-a75a-34dfd9014c19_rwc_0x0x2341x1320x1280.jpeg?h=9df9befe781a8e3c8debd59f98cd234b" alt="" /></figure></a>
-            <a role="listitem" href="https://nicksykes.myportfolio.com/my-startup-jot-bot" target="_blank" rel="noreferrer"><span class="pi-num">04</span><strong>Jot Bot</strong><span>Startup / Mobile</span><time>2022</time><i>↗</i><figure><img src="https://cdn.myportfolio.com/e2cc5b27-9f9e-4849-a78f-b06395dbbbc8/14556d54-0286-4a8d-a54f-36986c32dedf_rwc_0x86x2704x1524x1280.png?h=457a9fecf666ba9e3f76c7ecea33f9f4" alt="" /></figure></a>
-            <a role="listitem" href="https://nicksykes.myportfolio.com/object-recognition" target="_blank" rel="noreferrer"><span class="pi-num">05</span><strong>Object Recognition</strong><span>Applied AI / Mobile</span><time>2021</time><i>↗</i><figure><img src="https://cdn.myportfolio.com/e2cc5b27-9f9e-4849-a78f-b06395dbbbc8/8376c900-e4df-469c-b0fd-924bea8b341d_rwc_0x86x2704x1524x1280.png?h=b2712340cb6abb7a7084ec1a8c6dd51d" alt="" /></figure></a>
-            <a role="listitem" href="https://nicksykes.myportfolio.com/online-admin" target="_blank" rel="noreferrer"><span class="pi-num">06</span><strong>Online Admin</strong><span>Enterprise / Platform</span><time>2020</time><i>↗</i><figure><img src="https://cdn.myportfolio.com/e2cc5b27-9f9e-4849-a78f-b06395dbbbc8/892b679e-5693-4811-b56a-4b80d9673e6b_rwc_0x55x2427x1367x1280.png?h=1ac4d22811c8786374421b0287f6e1fa" alt="" /></figure></a>
-          </div>
-        </section>
-
-        <section class="pi-method pi-shell" id="pi-method">
-          <header><span>03 / Working method</span><h2>Move from ambiguity to something people can use.</h2></header>
-          <ol><li><span>01</span><strong>Get close</strong><p>Watch the work and listen for the real problem.</p></li><li><span>02</span><strong>Make it visible</strong><p>Prototype the idea so teams can react to something concrete.</p></li><li><span>03</span><strong>Make it useful</strong><p>Refine the product around behavior, evidence, and clarity.</p></li></ol>
-        </section>
-
-        <footer class="pi-footer pi-shell"><h2>Have a hard problem?</h2><a href="mailto:nwsykes@gmail.com">Let’s make it useful. ↗</a><p>Nick Sykes / Utah / 2026</p></footer>
+      <section class="view resume-view" data-panel="resume" aria-labelledby="resume-title" aria-hidden="true">
+        <div class="resume-intro">
+          <div><p>Résumé</p><h1 id="resume-title">Product creator, strategist, and design thinker.</h1></div>
+          <a class="download-button" href="https://www.dropbox.com/scl/fi/duz0wtng227e86gbsrrh4/11-NWS_Resume.pdf?rlkey=gbfc08x514opxm9szkxc0qz67&st=sqeb0e5x&dl=1" target="_blank" rel="noreferrer">Download PDF <span>↓</span></a>
+        </div>
+        <a class="resume-sheet" href="https://www.dropbox.com/scl/fi/duz0wtng227e86gbsrrh4/11-NWS_Resume.pdf?rlkey=gbfc08x514opxm9szkxc0qz67&st=sqeb0e5x&dl=1" target="_blank" rel="noreferrer" aria-label="Download Nick Sykes résumé as PDF"><img src="https://cdn.myportfolio.com/e2cc5b27-9f9e-4849-a78f-b06395dbbbc8/223b47dc-4e9b-4de3-ae13-a262861018e6_rw_1200.png?h=a500e8cca3535c56007eee52fb027784" alt="Nick Sykes résumé" /></a>
       </section>
     </main>
 
+    <footer class="site-footer">
+      <p>Nick Sykes</p>
+      <p>Product creator · Strategist · Design thinker</p>
+      <a href="mailto:nwsykes@gmail.com">nwsykes@gmail.com</a>
+    </footer>
+
+    <button class="back-to-top" type="button" aria-label="Back to top">↑</button>
     <script src="app.js"></script>
   </body>
 </html>
