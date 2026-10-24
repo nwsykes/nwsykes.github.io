@@ -113,32 +113,25 @@
   align-items: start;
 }
 
-.education-list {
+.education-summary {
   display: grid;
-  gap: 17px;
+  gap: 7px;
 }
 
-.education-list span,
-.education-list strong,
-.education-list small {
+.education-summary span {
   display: block;
-}
-
-.education-list strong {
-  margin-bottom: 3px;
-  font-size: 11px;
-}
-
-.education-list small {
   color: var(--muted);
-  font-size: 10px;
   line-height: 1.45;
 }
 
-.education-list > a {
+.education-summary strong {
+  color: var(--ink);
+  font-weight: 800;
+}
+
+.education-summary > a {
   width: fit-content;
-  padding-bottom: 4px;
-  border-bottom: 1px solid;
+  margin-top: 5px;
   color: var(--accent);
   font-size: 9px;
   font-weight: 800;

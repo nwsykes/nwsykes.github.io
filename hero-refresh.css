@@ -46,13 +46,27 @@
   text-transform: uppercase;
 }
 
+.hero-wordmark {
+  width: 136px;
+  height: 29px;
+  display: block;
+  margin: 0 0 5px;
+  overflow: hidden;
+}
+
+.hero-wordmark img {
+  width: 260px;
+  max-width: none;
+  transform: translate(-62px, -20px);
+}
+
 .hero-copy h1 > span,
 .hero-copy h1 > em {
   display: block;
 }
 
 .hero-copy h1 {
-  font-size: clamp(68px, 8.25vw, 119px);
+  font-size: clamp(64px, 7.2vw, 104px);
 }
 
 .capabilities {
@@ -65,6 +79,10 @@
 
 html[data-theme="dark"] .hero-portrait img {
   filter: brightness(0.9) saturate(0.92);
+}
+
+html[data-theme="dark"] .hero-wordmark img {
+  filter: invert(1);
 }
 
 @media (max-width: 900px) {
@@ -84,7 +102,7 @@ html[data-theme="dark"] .hero-portrait img {
   }
 
   .hero-copy h1 {
-    font-size: clamp(50px, 14vw, 78px);
+    font-size: clamp(44px, 11.5vw, 72px);
     line-height: 0.9;
   }
 
