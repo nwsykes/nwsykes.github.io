@@ -20,4 +20,6 @@ toggle.addEventListener('click', () => {
   localStorage.setItem('nick-sykes-theme', next);
 });
 
-document.querySelector('[data-year]').textContent = new Date().getFullYear();
+document.querySelectorAll('[data-year]').forEach((year) => {
+  year.textContent = new Date().getFullYear();
+});
