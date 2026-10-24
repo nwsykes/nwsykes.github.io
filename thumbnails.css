@@ -1,0 +1,157 @@
+.index-list > a {
+  min-height: 142px;
+  grid-template-columns: 48px 190px 1.35fr 0.8fr 58px 24px;
+  padding: 18px 12px 18px 0;
+  overflow: visible;
+}
+
+.index-list > a:hover,
+.index-list > a:focus-visible {
+  padding-left: 8px;
+  background: color-mix(in srgb, var(--accent) 5%, transparent);
+}
+
+.index-list .num {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.index-list figure {
+  position: static;
+  grid-column: 2;
+  grid-row: 1;
+  width: 190px;
+  margin: 0;
+  opacity: 1;
+  overflow: hidden;
+  pointer-events: none;
+  transform: none;
+  box-shadow: none;
+  background: var(--soft);
+}
+
+.index-list figure img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  transition: transform 0.35s ease, filter 0.25s ease;
+}
+
+.index-list > a:hover figure,
+.index-list > a:focus-visible figure {
+  opacity: 1;
+  transform: none;
+}
+
+.index-list > a:hover figure img,
+.index-list > a:focus-visible figure img {
+  transform: scale(1.045);
+}
+
+.index-list strong {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.index-list > a > span:nth-of-type(2) {
+  grid-column: 4;
+  grid-row: 1;
+}
+
+.index-list time {
+  grid-column: 5;
+  grid-row: 1;
+}
+
+.index-list i {
+  grid-column: 6;
+  grid-row: 1;
+}
+
+@media (max-width: 1050px) and (min-width: 901px) {
+  .index-list > a {
+    grid-template-columns: 38px 150px 1.3fr 0.7fr 50px 20px;
+    gap: 14px;
+  }
+
+  .index-list figure {
+    width: 150px;
+  }
+}
+
+@media (max-width: 900px) {
+  .index-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 32px 16px;
+    border-top: 0;
+  }
+
+  .index-list > a {
+    min-height: 0;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto auto auto;
+    gap: 0 12px;
+    padding: 0 0 22px;
+    border-top: 1px solid var(--ink);
+  }
+
+  .index-list > a:hover,
+  .index-list > a:focus-visible {
+    padding-left: 0;
+    background: transparent;
+  }
+
+  .index-list figure {
+    display: block;
+    grid-column: 1 / -1;
+    grid-row: 1;
+    width: 100%;
+    margin: 12px 0 14px;
+  }
+
+  .index-list .num {
+    grid-column: 1;
+    grid-row: 2;
+    margin-bottom: 12px;
+  }
+
+  .index-list time {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .index-list strong {
+    grid-column: 1 / -1;
+    grid-row: 3;
+    margin-bottom: 8px;
+    font-size: 20px;
+    line-height: 1.05;
+  }
+
+  .index-list > a > span:nth-of-type(2) {
+    grid-column: 1;
+    grid-row: 4;
+  }
+
+  .index-list i {
+    grid-column: 2;
+    grid-row: 4;
+  }
+}
+
+@media (max-width: 620px) {
+  .index-list {
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+
+  .index-list figure {
+    margin-top: 12px;
+  }
+
+  .index-list strong {
+    font-size: 22px;
+  }
+}
