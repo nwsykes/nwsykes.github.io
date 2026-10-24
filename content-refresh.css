@@ -156,6 +156,31 @@
   align-items: start;
 }
 
+.resume-proof {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin: -24px 0 48px;
+  padding: 20px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.resume-proof span {
+  color: var(--muted);
+  font-size: 9px;
+  line-height: 1.35;
+  text-transform: uppercase;
+}
+
+.resume-proof strong {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--accent);
+  font-size: 22px;
+  line-height: 1;
+}
+
 .education-summary {
   display: grid;
   gap: 7px;
@@ -283,5 +308,16 @@
 
   .resume-copy dl > div {
     grid-template-columns: 74px 1fr;
+  }
+
+  .resume-proof {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .resume-proof strong {
+    display: inline-block;
+    min-width: 54px;
+    margin: 0 8px 0 0;
   }
 }
