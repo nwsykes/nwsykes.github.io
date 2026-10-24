@@ -23,3 +23,26 @@ toggle.addEventListener('click', () => {
 document.querySelectorAll('[data-year]').forEach((year) => {
   year.textContent = new Date().getFullYear();
 });
+
+const sectionLinks = [...document.querySelectorAll('.site-header a[href^="#"]')];
+const sections = [...document.querySelectorAll('main > section[id]')];
+
+function updateActiveSection() {
+  const marker = window.scrollY + document.querySelector('.site-header').offsetHeight + Math.min(window.innerHeight * 0.22, 170);
+  let activeSection = sections[0];
+
+  sections.forEach((section) => {
+    if (section.offsetTop <= marker) activeSection = section;
+  });
+
+  sectionLinks.forEach((link) => {
+    const active = link.hash === `#${activeSection.id}`;
+    link.classList.toggle('is-active', active);
+    if (active) link.setAttribute('aria-current', 'location');
+    else link.removeAttribute('aria-current');
+  });
+}
+
+addEventListener('scroll', updateActiveSection, { passive: true });
+addEventListener('resize', updateActiveSection);
+updateActiveSection();
