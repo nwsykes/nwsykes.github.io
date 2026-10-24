@@ -1,18 +1,22 @@
 .hero {
-  grid-template-columns: 260px 1fr;
+  grid-template-columns: 260px minmax(0, 1fr);
 }
 
 .hero-meta {
+  grid-column: 1 / -1;
+  grid-row: 1;
   display: grid;
-  grid-template-columns: 104px 1fr;
-  gap: 16px;
-  align-items: stretch;
+  grid-template-columns: 84px minmax(0, 1fr);
+  gap: 22px;
+  align-items: center;
   align-self: start;
+  padding-bottom: 22px;
+  border-bottom: 1px solid var(--line);
 }
 
 .hero-portrait {
-  width: 104px;
-  height: 142px;
+  width: 84px;
+  height: 100px;
   margin: 0;
   overflow: hidden;
   background: var(--soft);
@@ -27,9 +31,10 @@
 
 .hero-id {
   min-width: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr);
+  gap: 18px;
+  align-items: center;
 }
 
 .hero-id > span {
@@ -46,11 +51,22 @@
   text-transform: uppercase;
 }
 
+.hero-id > div {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.hero-id > div > p {
+  padding-left: 18px;
+  border-left: 1px solid var(--line);
+}
+
 .hero-wordmark {
   width: 136px;
   height: 29px;
   display: block;
-  margin: 0 0 5px;
+  margin: 0;
   overflow: hidden;
 }
 
@@ -65,16 +81,26 @@
   display: block;
 }
 
+.hero-copy {
+  grid-column: 2;
+  grid-row: 2;
+  align-self: start;
+}
+
 .hero-copy h1 {
   font-size: clamp(64px, 7.2vw, 104px);
 }
 
 .capabilities {
   grid-column: 2;
+  grid-row: 3;
+  align-self: end;
 }
 
 .scroll-cue {
   grid-column: 1;
+  grid-row: 3;
+  align-self: end;
 }
 
 html[data-theme="dark"] .hero-portrait img {
@@ -94,6 +120,8 @@ html[data-theme="dark"] .hero-wordmark img {
     width: min(290px, 100%);
     grid-template-columns: 82px 1fr;
     gap: 14px;
+    padding-bottom: 0;
+    border-bottom: 0;
   }
 
   .hero-portrait {
@@ -106,8 +134,37 @@ html[data-theme="dark"] .hero-wordmark img {
     line-height: 0.9;
   }
 
+  .hero-id {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+  }
+
+  .hero-id > div {
+    display: block;
+  }
+
+  .hero-id > div > p {
+    padding-left: 0;
+    border-left: 0;
+  }
+
+  .hero-copy,
   .capabilities,
   .scroll-cue {
     grid-column: 1;
+  }
+
+  .hero-copy {
+    grid-row: 2;
+  }
+
+  .capabilities {
+    grid-row: 3;
+  }
+
+  .scroll-cue {
+    grid-row: 4;
   }
 }
