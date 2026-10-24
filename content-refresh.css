@@ -60,16 +60,15 @@
 
 .section-head h2 {
   font-family: var(--display);
-  font-size: clamp(52px, 5.6vw, 80px);
+  font-size: clamp(24px, 2vw, 30px);
   font-weight: 900;
-  line-height: 0.9;
-  letter-spacing: -0.055em;
+  line-height: 1;
+  letter-spacing: -0.045em;
   text-transform: uppercase;
 }
 
 .hero h1,
-.resume-head h2,
-.site-footer > a:nth-child(2) {
+.resume-head h2 {
   font-family: var(--display);
   font-weight: 900;
   letter-spacing: -0.055em;
@@ -77,6 +76,22 @@
 
 .resume-head h2 {
   font-size: clamp(58px, 7vw, 98px);
+}
+
+.site-footer {
+  min-height: 190px;
+  grid-template-columns: 1fr auto;
+}
+
+.site-footer > a.back-to-top {
+  align-self: end;
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: 10px;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: right;
+  text-transform: uppercase;
 }
 
 .capabilities {
@@ -251,7 +266,7 @@
   }
 
   .section-head h2 {
-    font-size: clamp(46px, 9vw, 70px);
+    font-size: 26px;
   }
 
   .capabilities {
@@ -329,7 +344,11 @@
   }
 
   .section-head h2 {
-    font-size: 44px;
+    font-size: 24px;
+  }
+
+  .site-footer {
+    grid-template-columns: 1fr auto;
   }
 
   .capabilities {
