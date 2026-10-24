@@ -55,17 +55,17 @@
 }
 
 .hero-wordmark {
-  width: 148px;
-  height: 29px;
+  width: max-content;
+  height: auto;
   display: block;
   margin: 0;
-  overflow: hidden;
-}
-
-.hero-wordmark img {
-  width: 260px;
-  max-width: none;
-  transform: translate(-62px, -20px);
+  overflow: visible;
+  font-family: var(--display);
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 0.9;
+  letter-spacing: -0.065em;
+  text-transform: uppercase;
 }
 
 .hero-copy h1 > span,
@@ -79,7 +79,8 @@
 }
 
 .hero-copy h1 {
-  font-size: clamp(64px, 7.2vw, 104px);
+  font-size: clamp(58px, 5.9vw, 86px);
+  line-height: 0.9;
 }
 
 .capabilities {
@@ -94,10 +95,6 @@
 
 html[data-theme="dark"] .hero-portrait img {
   filter: brightness(0.9) saturate(0.92);
-}
-
-html[data-theme="dark"] .hero-wordmark img {
-  filter: invert(1);
 }
 
 @media (max-width: 900px) {
@@ -117,7 +114,7 @@ html[data-theme="dark"] .hero-wordmark img {
   }
 
   .hero-copy h1 {
-    font-size: clamp(44px, 11.5vw, 72px);
+    font-size: clamp(42px, 10.5vw, 66px);
     line-height: 0.9;
   }
 

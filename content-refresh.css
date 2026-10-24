@@ -1,6 +1,12 @@
+:root {
+  --display: "Arial Black", "Avenir Next Heavy", "Helvetica Neue", Arial, sans-serif;
+}
+
 .monogram {
   position: relative;
-  letter-spacing: -0.06em;
+  font-family: var(--display);
+  font-weight: 900;
+  letter-spacing: -0.07em;
 }
 
 .site-header {
@@ -53,12 +59,24 @@
 }
 
 .section-head h2 {
-  font-family: var(--cond);
-  font-size: clamp(56px, 6.2vw, 88px);
-  font-weight: 700;
+  font-family: var(--display);
+  font-size: clamp(52px, 5.6vw, 80px);
+  font-weight: 900;
   line-height: 0.9;
-  letter-spacing: -0.065em;
+  letter-spacing: -0.055em;
   text-transform: uppercase;
+}
+
+.hero h1,
+.resume-head h2,
+.site-footer > a:nth-child(2) {
+  font-family: var(--display);
+  font-weight: 900;
+  letter-spacing: -0.055em;
+}
+
+.resume-head h2 {
+  font-size: clamp(58px, 7vw, 98px);
 }
 
 .capabilities {
