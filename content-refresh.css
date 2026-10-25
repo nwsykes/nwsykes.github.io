@@ -41,11 +41,14 @@
   color: var(--accent);
 }
 
-.linkedin-icon img {
-  width: 17px;
-  height: 17px;
-  object-fit: contain;
-  filter: brightness(0);
+.linkedin-mark {
+  display: block;
+  font-family: Arial, "Helvetica Neue", sans-serif;
+  font-size: 21px;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.09em;
+  transform: translateY(-1px);
 }
 
 .material-symbols-outlined {
@@ -73,10 +76,6 @@
   position: absolute;
   inset: -1px 50% -1px -1px;
   background: currentColor;
-}
-
-html[data-theme="dark"] .linkedin-icon img {
-  filter: none;
 }
 
 .site-header nav a {
