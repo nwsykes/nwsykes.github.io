@@ -24,6 +24,26 @@ document.querySelectorAll('[data-year]').forEach((year) => {
   year.textContent = new Date().getFullYear();
 });
 
+const heroTitle = document.querySelector('#hero-title');
+const stackedHero = matchMedia('(max-width: 900px)');
+
+function syncHeroPortrait() {
+  if (!heroTitle || stackedHero.matches) {
+    root.style.removeProperty('--hero-title-height');
+    return;
+  }
+
+  root.style.setProperty('--hero-title-height', `${Math.ceil(heroTitle.getBoundingClientRect().height)}px`);
+}
+
+if (heroTitle && 'ResizeObserver' in window) {
+  new ResizeObserver(syncHeroPortrait).observe(heroTitle);
+}
+
+stackedHero.addEventListener('change', syncHeroPortrait);
+document.fonts?.ready.then(syncHeroPortrait);
+syncHeroPortrait();
+
 const sectionLinks = [...document.querySelectorAll('.site-header a[href^="#"]')];
 const sections = [...document.querySelectorAll('main > section[id]')];
 
