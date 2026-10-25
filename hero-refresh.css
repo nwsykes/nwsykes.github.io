@@ -4,15 +4,15 @@
 
 .hero-meta {
   display: grid;
-  grid-template-columns: 128px minmax(0, 1fr);
+  grid-template-columns: clamp(121px, 12.28vw, 179px) minmax(0, 1fr);
   gap: 20px;
   align-items: stretch;
   align-self: center;
 }
 
 .hero-portrait {
-  width: 128px;
-  height: 166px;
+  width: clamp(121px, 12.28vw, 179px);
+  height: clamp(157px, 15.93vw, 232px);
   margin: 0;
   overflow: hidden;
   background: var(--soft);
