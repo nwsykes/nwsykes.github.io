@@ -147,11 +147,40 @@
     gap: 48px;
   }
 
+  #videos .index-list,
+  #projects .index-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 34px 12px;
+  }
+
+  #videos .index-list > a,
+  #projects .index-list > a {
+    min-width: 0;
+  }
+
   .index-list figure {
     margin-top: 12px;
   }
 
   .index-list strong {
     font-size: 22px;
+  }
+
+  #videos .index-list figure,
+  #projects .index-list figure {
+    margin: 8px 0 11px;
+  }
+
+  #videos .index-list strong,
+  #projects .index-list strong {
+    overflow-wrap: anywhere;
+    font-size: 17px;
+    line-height: 1.08;
+  }
+
+  #videos .index-list > a > span:nth-of-type(2),
+  #projects .index-list > a > span:nth-of-type(2) {
+    font-size: 8px;
+    line-height: 1.35;
   }
 }
