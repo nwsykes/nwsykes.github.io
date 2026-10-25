@@ -44,7 +44,7 @@ stackedHero.addEventListener('change', syncHeroPortrait);
 document.fonts?.ready.then(syncHeroPortrait);
 syncHeroPortrait();
 
-const sectionLinks = [...document.querySelectorAll('.site-header a[href^="#"]')];
+const sectionLinks = [...document.querySelectorAll('.site-header a[href^="#"], .mobile-section-nav a[href^="#"]')];
 const sections = [...document.querySelectorAll('main > section[id]')];
 
 function updateActiveSection() {
