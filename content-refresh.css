@@ -211,25 +211,11 @@
   border-bottom: 1px solid var(--ink);
 }
 
-.patents .section-head p a {
-  display: block;
-  width: fit-content;
-  margin-top: 12px;
-  color: var(--ink);
-  font-size: 10px;
-  font-weight: 800;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-}
-
-.patents .section-head p a:hover {
-  color: var(--accent);
-}
-
 .patents .section-head p {
   width: 100%;
   max-width: none;
   margin-left: 0;
+  white-space: normal;
 }
 
 .index-list.patent-index > a > .patent-application {
