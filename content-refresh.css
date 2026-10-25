@@ -25,32 +25,37 @@
 }
 
 .header-icon {
-  width: 31px;
-  height: 31px;
+  width: 35px;
+  height: 35px;
   display: grid;
   place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 50%;
   color: var(--ink);
+  background: transparent;
 }
 
 .header-icon:hover,
 .header-icon:focus-visible {
+  border-color: var(--accent);
   color: var(--accent);
 }
 
-.linkedin-icon {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 19px;
-  font-weight: 900;
-  letter-spacing: -0.08em;
+.linkedin-icon img {
+  width: 17px;
+  height: 17px;
+  object-fit: contain;
+  filter: brightness(0);
 }
 
-.mail-icon svg {
-  width: 20px;
-  fill: none;
-  stroke: currentColor;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-width: 1.8;
+.material-symbols-outlined {
+  font-size: 20px;
+  line-height: 1;
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
+html[data-theme="dark"] .linkedin-icon img {
+  filter: none;
 }
 
 .site-header nav a {
@@ -417,6 +422,19 @@
 }
 
 @media (max-width: 620px) {
+  .site-header {
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+  }
+
+  .site-header nav {
+    display: none;
+  }
+
+  .header-tools {
+    justify-self: end;
+  }
+
   .site-header nav a.is-active::before {
     left: -9px;
     width: 5px;
