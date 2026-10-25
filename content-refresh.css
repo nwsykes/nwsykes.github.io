@@ -575,3 +575,25 @@ html[data-theme="dark"] .linkedin-icon img {
     margin: 0 8px 0 0;
   }
 }
+
+/* Use the same Material Symbols family and optical weight as the header tools. */
+.index-list i {
+  font-size: 0;
+}
+
+.index-list i::before {
+  content: "north_east";
+  display: block;
+  font-family: "Material Symbols Outlined";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  white-space: nowrap;
+  direction: ltr;
+  font-feature-settings: "liga";
+  -webkit-font-feature-settings: "liga";
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
