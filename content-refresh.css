@@ -167,12 +167,15 @@
 }
 
 .site-footer {
-  min-height: 190px;
+  min-height: 0;
+  padding-top: 32px;
+  padding-bottom: 32px;
   grid-template-columns: 1fr auto;
+  align-items: center;
 }
 
 .site-footer > a.back-to-top {
-  align-self: end;
+  align-self: center;
   color: var(--muted);
   font-family: var(--sans);
   font-size: 10px;

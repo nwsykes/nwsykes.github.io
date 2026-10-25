@@ -98,6 +98,11 @@
     border: 0;
   }
 
+  #videos .index-list > a,
+  #projects .index-list > a {
+    align-items: start;
+  }
+
   .index-list > a:hover,
   .index-list > a:focus-visible {
     padding-left: 0;
@@ -121,6 +126,14 @@
   .index-list time {
     grid-column: 2;
     grid-row: 2;
+  }
+
+  #videos .index-list .num,
+  #videos .index-list time,
+  #projects .index-list .num,
+  #projects .index-list time {
+    align-self: start;
+    line-height: 1;
   }
 
   .index-list strong {
