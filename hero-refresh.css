@@ -66,11 +66,11 @@
   margin: 0;
   overflow: visible;
   color: var(--ink);
-  font-family: var(--display);
+  font-family: inherit;
   font-size: 10px;
-  font-weight: 900;
+  font-weight: 400;
   line-height: 1.55;
-  letter-spacing: 0.13em;
+  letter-spacing: normal;
   text-transform: uppercase;
 }
 

@@ -18,6 +18,41 @@
   justify-self: end;
 }
 
+.header-tools {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.header-icon {
+  width: 31px;
+  height: 31px;
+  display: grid;
+  place-items: center;
+  color: var(--ink);
+}
+
+.header-icon:hover,
+.header-icon:focus-visible {
+  color: var(--accent);
+}
+
+.linkedin-icon {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 19px;
+  font-weight: 900;
+  letter-spacing: -0.08em;
+}
+
+.mail-icon svg {
+  width: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
+
 .site-header nav a {
   position: relative;
 }
@@ -60,7 +95,7 @@
 
 .section-head h2 {
   font-family: var(--display);
-  font-size: clamp(24px, 2vw, 30px);
+  font-size: 23px;
   font-weight: 900;
   line-height: 1;
   letter-spacing: -0.045em;
@@ -124,7 +159,8 @@
 }
 
 .patents .section-head p a {
-  display: inline-block;
+  display: block;
+  width: fit-content;
   margin-top: 12px;
   color: var(--ink);
   font-size: 10px;
@@ -135,6 +171,45 @@
 
 .patents .section-head p a:hover {
   color: var(--accent);
+}
+
+.patents .section-head p {
+  width: 100%;
+  max-width: none;
+  margin-left: 0;
+}
+
+.index-list.patent-index > a > .patent-application {
+  grid-column: 2;
+  grid-row: 1;
+  color: var(--muted);
+  font-size: 10px;
+  overflow-wrap: anywhere;
+  text-transform: uppercase;
+}
+
+.patent-index strong {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.index-list.patent-index > a > .patent-descriptor {
+  grid-column: 4;
+  grid-row: 1;
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.35;
+  text-transform: uppercase;
+}
+
+.patent-index time {
+  grid-column: 5;
+  grid-row: 1;
+}
+
+.patent-index i {
+  grid-column: 6;
+  grid-row: 1;
 }
 
 .patent-list {
@@ -269,10 +344,6 @@
     gap: 15px;
   }
 
-  .section-head h2 {
-    font-size: 26px;
-  }
-
   .capabilities {
     gap: 9px 0;
   }
@@ -283,6 +354,27 @@
 
   .patents {
     padding: 78px 0 100px;
+  }
+
+  .index-list.patent-index > a > .patent-application {
+    grid-column: 1 / -1;
+    grid-row: 4;
+    margin-bottom: 7px;
+  }
+
+  .patent-index strong {
+    grid-column: 1 / -1;
+    grid-row: 3;
+  }
+
+  .index-list.patent-index > a > .patent-descriptor {
+    grid-column: 1 / -1;
+    grid-row: 5;
+  }
+
+  .patent-index time {
+    grid-column: 2;
+    grid-row: 2;
   }
 
   .patent-list {
@@ -345,10 +437,6 @@
 
   .site-header nav a {
     font-size: 8px;
-  }
-
-  .section-head h2 {
-    font-size: 24px;
   }
 
   .site-footer {
