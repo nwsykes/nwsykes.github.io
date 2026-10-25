@@ -173,7 +173,13 @@
 
   #videos .index-list strong,
   #projects .index-list strong {
+    display: -webkit-box;
+    height: 2.16em;
     overflow-wrap: anywhere;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
     font-size: 17px;
     line-height: 1.08;
   }
