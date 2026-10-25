@@ -7,7 +7,7 @@
   grid-template-columns: 128px minmax(0, 1fr);
   gap: 20px;
   align-items: stretch;
-  align-self: start;
+  align-self: center;
 }
 
 .hero-portrait {
@@ -27,11 +27,13 @@
 
 .hero-id {
   min-width: 0;
-  display: grid;
-  grid-template-rows: auto 1fr;
+  position: relative;
 }
 
 .hero-id > span {
+  position: absolute;
+  top: 0;
+  left: 0;
   color: var(--accent);
   font-size: 10px;
   font-weight: 900;
@@ -46,7 +48,10 @@
 }
 
 .hero-id > div {
-  align-self: center;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
 }
 
 .hero-id > div > p {
@@ -107,6 +112,7 @@ html[data-theme="dark"] .hero-portrait img {
     width: min(290px, 100%);
     grid-template-columns: 82px 1fr;
     gap: 14px;
+    align-self: start;
   }
 
   .hero-portrait {
@@ -117,17 +123,6 @@ html[data-theme="dark"] .hero-portrait img {
   .hero-copy h1 {
     font-size: clamp(42px, 10.5vw, 66px);
     line-height: 0.9;
-  }
-
-  .hero-id {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    justify-content: space-between;
-  }
-
-  .hero-id > div {
-    display: block;
   }
 
   .hero-id > div > p {
