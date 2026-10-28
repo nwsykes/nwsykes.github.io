@@ -1,14 +1,10 @@
 .project-hero {
-  display: grid;
-  grid-template-columns: 180px minmax(0, 1fr) 260px;
-  gap: 28px;
-  padding-top: 88px;
-  padding-bottom: 82px;
+  padding-top: 52px;
+  padding-bottom: 70px;
   border-bottom: 1px solid var(--ink);
 }
 
 .project-back,
-.project-kicker,
 .project-meta {
   color: var(--muted);
   font-size: 10px;
@@ -18,35 +14,30 @@
 }
 
 .project-back {
-  grid-column: 1;
-  align-self: start;
+  display: inline-flex;
+  gap: 7px;
+  margin-bottom: 34px;
+  color: var(--accent);
 }
 
 .project-back:hover,
 .project-back:focus-visible {
-  color: var(--accent);
-}
-
-.project-kicker {
-  grid-column: 2;
-  grid-row: 1;
-  color: var(--accent);
+  color: var(--ink);
 }
 
 .project-hero h1 {
-  grid-column: 2 / 4;
-  max-width: 1100px;
-  margin: 12px 0 22px;
+  max-width: 980px;
+  margin: 0 0 22px;
   font-family: var(--display);
-  font-size: clamp(50px, 6.8vw, 102px);
+  font-size: clamp(42px, 5vw, 72px);
   font-weight: 900;
-  line-height: 0.92;
-  letter-spacing: -0.06em;
+  line-height: 0.95;
+  letter-spacing: -0.055em;
+  text-align: left;
   text-transform: uppercase;
 }
 
 .project-meta {
-  grid-column: 2;
   display: flex;
   gap: 18px;
 }
@@ -58,8 +49,8 @@
 }
 
 .project-summary {
-  grid-column: 3;
-  margin: 0;
+  max-width: 720px;
+  margin: 26px 0 0;
   color: var(--muted);
   font-family: Georgia, serif;
   font-size: 17px;
@@ -170,36 +161,22 @@
 
 @media (max-width: 900px) {
   .project-hero {
-    grid-template-columns: 1fr;
-    gap: 18px;
-    padding-top: 58px;
+    padding-top: 38px;
     padding-bottom: 62px;
   }
 
-  .project-back,
-  .project-kicker,
-  .project-hero h1,
-  .project-meta,
-  .project-summary {
-    grid-column: 1;
-  }
-
   .project-back {
-    margin-bottom: 30px;
-  }
-
-  .project-kicker {
-    grid-row: auto;
+    margin-bottom: 28px;
   }
 
   .project-hero h1 {
-    margin: 0 0 8px;
-    font-size: clamp(48px, 12vw, 88px);
+    margin-bottom: 16px;
+    font-size: clamp(42px, 8.5vw, 68px);
   }
 
   .project-summary {
     max-width: 580px;
-    margin-top: 22px;
+    margin-top: 24px;
   }
 
   .project-cover {
@@ -239,12 +216,12 @@
 
 @media (max-width: 620px) {
   .project-hero {
-    padding-top: 42px;
+    padding-top: 28px;
     padding-bottom: 48px;
   }
 
   .project-hero h1 {
-    font-size: clamp(42px, 13.5vw, 64px);
+    font-size: clamp(36px, 11vw, 48px);
   }
 
   .project-meta {

@@ -1,14 +1,10 @@
 .video-hero {
-  display: grid;
-  grid-template-columns: 180px minmax(0, 1fr) 180px;
-  gap: 28px;
-  padding-top: 90px;
-  padding-bottom: 76px;
+  padding-top: 52px;
+  padding-bottom: 68px;
   border-bottom: 1px solid var(--ink);
 }
 
 .video-back,
-.video-kicker,
 .video-meta {
   color: var(--muted);
   font-size: 10px;
@@ -18,35 +14,30 @@
 }
 
 .video-back {
-  grid-column: 1;
-  align-self: start;
+  display: inline-flex;
+  gap: 7px;
+  margin-bottom: 34px;
+  color: var(--accent);
 }
 
 .video-back:hover,
 .video-back:focus-visible {
-  color: var(--accent);
-}
-
-.video-kicker {
-  grid-column: 2;
-  grid-row: 1;
-  color: var(--accent);
+  color: var(--ink);
 }
 
 .video-hero h1 {
-  grid-column: 2 / 4;
-  max-width: 1080px;
-  margin: 12px 0 20px;
+  max-width: 980px;
+  margin: 0 0 22px;
   font-family: var(--display);
-  font-size: clamp(54px, 7.2vw, 108px);
+  font-size: clamp(42px, 5vw, 72px);
   font-weight: 900;
-  line-height: 0.92;
-  letter-spacing: -0.06em;
+  line-height: 0.95;
+  letter-spacing: -0.055em;
+  text-align: left;
   text-transform: uppercase;
 }
 
 .video-meta {
-  grid-column: 2 / 4;
   display: flex;
   gap: 18px;
 }
@@ -141,30 +132,17 @@
 
 @media (max-width: 900px) {
   .video-hero {
-    grid-template-columns: 1fr;
-    gap: 18px;
-    padding-top: 58px;
+    padding-top: 38px;
     padding-bottom: 58px;
   }
 
-  .video-back,
-  .video-kicker,
-  .video-hero h1,
-  .video-meta {
-    grid-column: 1;
-  }
-
   .video-back {
-    margin-bottom: 32px;
-  }
-
-  .video-kicker {
-    grid-row: auto;
+    margin-bottom: 28px;
   }
 
   .video-hero h1 {
-    margin: 0 0 8px;
-    font-size: clamp(50px, 12.5vw, 92px);
+    margin-bottom: 16px;
+    font-size: clamp(42px, 8.5vw, 68px);
   }
 
   .video-media {
@@ -187,12 +165,12 @@
 
 @media (max-width: 620px) {
   .video-hero {
-    padding-top: 42px;
+    padding-top: 28px;
     padding-bottom: 46px;
   }
 
   .video-hero h1 {
-    font-size: clamp(43px, 14vw, 68px);
+    font-size: clamp(36px, 11vw, 48px);
   }
 
   .video-meta {
