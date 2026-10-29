@@ -97,6 +97,9 @@
   margin: 0;
   overflow: hidden;
   background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .project-samples-stack img,
@@ -107,7 +110,7 @@
 }
 
 .object-timeline {
-  width: min(1660px, calc(100% - 48px));
+  width: min(1320px, calc(100% - 64px));
   padding-top: 64px;
   padding-bottom: 110px;
   border-bottom: 1px solid var(--ink);
@@ -131,8 +134,14 @@
   display: grid;
   grid-template-columns: minmax(300px, 0.56fr) minmax(0, 1.7fr);
   gap: clamp(30px, 3vw, 58px);
-  align-items: start;
+  align-items: center;
   padding: 0;
+}
+
+.object-timeline-row:first-of-type .object-timeline-visual img {
+  width: 114%;
+  max-width: none;
+  flex: 0 0 114%;
 }
 
 .object-timeline-copy {
@@ -166,6 +175,10 @@
   .object-timeline {
     padding-top: 64px;
     padding-bottom: 78px;
+  }
+
+  .object-timeline {
+    width: calc(100% - 32px);
   }
 
   .project-editorial-copy,
