@@ -107,59 +107,58 @@
 }
 
 .object-timeline {
-  padding-top: 82px;
+  width: min(1660px, calc(100% - 48px));
+  padding-top: 64px;
   padding-bottom: 110px;
   border-bottom: 1px solid var(--ink);
 }
 
 .object-timeline-intro {
-  display: grid;
-  grid-template-columns: minmax(260px, 0.72fr) minmax(0, 1.45fr);
-  gap: clamp(38px, 5vw, 84px);
-  align-items: end;
-  padding-bottom: 52px;
+  padding-bottom: 30px;
 }
 
 .object-timeline-intro h2 {
-  max-width: 780px;
   margin: 0;
   font-family: var(--display);
-  font-size: clamp(34px, 4vw, 58px);
+  font-size: 22px;
   font-weight: 900;
-  line-height: 0.95;
-  letter-spacing: -0.055em;
+  line-height: 1;
+  letter-spacing: -0.025em;
   text-transform: uppercase;
 }
 
 .object-timeline-row {
   display: grid;
-  grid-template-columns: minmax(260px, 0.72fr) minmax(0, 1.45fr);
-  gap: clamp(38px, 5vw, 84px);
+  grid-template-columns: minmax(300px, 0.56fr) minmax(0, 1.7fr);
+  gap: clamp(30px, 3vw, 58px);
   align-items: start;
   padding: 0;
 }
 
 .object-timeline-copy {
-  padding: 58px 0;
-  border-top: 1px solid var(--line);
+  padding: 34px 0;
+}
+
+.object-timeline-copy > .project-kicker {
+  display: none;
 }
 
 .object-timeline-copy h2 {
-  margin: 0 0 24px;
+  margin: 0 0 18px;
   font-family: var(--display);
-  font-size: clamp(27px, 2.7vw, 40px);
+  font-size: clamp(18px, 1.45vw, 22px);
   font-weight: 900;
-  line-height: 0.98;
-  letter-spacing: -0.045em;
+  line-height: 1.05;
+  letter-spacing: -0.025em;
   text-transform: uppercase;
 }
 
 .object-timeline-copy > div {
-  max-width: 500px;
+  max-width: 460px;
   color: var(--muted);
   font-family: Georgia, serif;
-  font-size: clamp(16px, 1.2vw, 19px);
-  line-height: 1.5;
+  font-size: clamp(15px, 1.05vw, 18px);
+  line-height: 1.46;
 }
 
 @media (max-width: 900px) {
@@ -221,6 +220,10 @@
     padding: 0;
     border-top: 0;
   }
+
+  .object-timeline-copy > .project-kicker {
+    display: block;
+  }
 }
 
 @media (max-width: 620px) {
@@ -235,9 +238,12 @@
   }
 
   .project-editorial-copy h2,
-  .project-samples-heading h2,
-  .object-timeline-intro h2 {
+  .project-samples-heading h2 {
     font-size: 36px;
+  }
+
+  .object-timeline-intro h2 {
+    font-size: 22px;
   }
 
   .project-editorial-copy > div,
@@ -255,6 +261,6 @@
   }
 
   .object-timeline-copy h2 {
-    font-size: 31px;
+    font-size: 24px;
   }
 }
