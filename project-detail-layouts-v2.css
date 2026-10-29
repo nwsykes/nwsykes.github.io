@@ -8,6 +8,8 @@
 }
 
 .project-cover--editorial {
+  width: min(980px, calc(100% - 64px));
+  margin-top: 36px;
   margin-bottom: 0;
   background: #fff;
 }
@@ -18,8 +20,8 @@
 }
 
 .project-editorial {
-  padding-top: 84px;
-  padding-bottom: 110px;
+  padding-top: 48px;
+  padding-bottom: 78px;
   border-bottom: 1px solid var(--ink);
 }
 
@@ -27,7 +29,7 @@
   display: grid;
   grid-template-columns: minmax(220px, 0.72fr) minmax(420px, 1.28fr);
   column-gap: clamp(48px, 8vw, 130px);
-  padding-bottom: 94px;
+  padding-bottom: 64px;
 }
 
 .project-editorial-copy > .project-kicker {
@@ -65,7 +67,7 @@
 }
 
 .project-samples {
-  padding-top: 76px;
+  padding-top: 48px;
   border-top: 1px solid var(--ink);
 }
 
@@ -74,7 +76,7 @@
   grid-template-columns: minmax(220px, 0.72fr) minmax(420px, 1.28fr);
   column-gap: clamp(48px, 8vw, 130px);
   align-items: end;
-  margin-bottom: 54px;
+  margin-bottom: 34px;
 }
 
 .project-samples-heading h2 {
@@ -90,6 +92,8 @@
 .project-samples-stack {
   display: grid;
   gap: 10px;
+  width: min(960px, 100%);
+  margin-inline: auto;
 }
 
 .project-samples-stack figure,
@@ -171,6 +175,11 @@
 }
 
 @media (max-width: 900px) {
+  .project-cover--editorial {
+    width: calc(100% - 32px);
+    margin-top: 30px;
+  }
+
   .project-editorial,
   .object-timeline {
     padding-top: 64px;
@@ -241,7 +250,7 @@
 
 @media (max-width: 620px) {
   .project-cover--editorial {
-    margin-top: 32px;
+    margin-top: 24px;
   }
 
   .project-editorial,
