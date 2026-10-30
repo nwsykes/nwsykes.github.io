@@ -154,15 +154,17 @@
 
 .object-timeline-copy > .project-kicker {
   display: none;
+  font-size: clamp(15px, 1.05vw, 18px);
+  font-weight: 900;
 }
 
 .object-timeline-copy h2 {
-  margin: 0 0 18px;
+  margin: 0 0 10px;
   font-family: var(--display);
-  font-size: clamp(18px, 1.45vw, 22px);
+  font-size: clamp(15px, 1.05vw, 18px);
   font-weight: 900;
-  line-height: 1.05;
-  letter-spacing: -0.025em;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
   text-transform: uppercase;
 }
 
@@ -283,6 +285,6 @@
   }
 
   .object-timeline-copy h2 {
-    font-size: 24px;
+    font-size: 18px;
   }
 }
