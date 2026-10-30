@@ -66,3 +66,36 @@ function updateActiveSection() {
 addEventListener('scroll', updateActiveSection, { passive: true });
 addEventListener('resize', updateActiveSection);
 updateActiveSection();
+
+const portfolioListLimit = 10;
+
+document.querySelectorAll('[data-collapsible-list]').forEach((list, listIndex) => {
+  const items = [...list.querySelectorAll(':scope > [role="listitem"]')];
+
+  if (items.length <= portfolioListLimit) return;
+
+  const hiddenItems = items.slice(portfolioListLimit);
+  const listId = list.id || `portfolio-list-${listIndex + 1}`;
+  list.id = listId;
+
+  hiddenItems.forEach((item) => {
+    item.hidden = true;
+  });
+
+  const moreButton = document.createElement('button');
+  moreButton.className = 'index-more';
+  moreButton.type = 'button';
+  moreButton.setAttribute('aria-controls', listId);
+  moreButton.setAttribute('aria-expanded', 'false');
+  moreButton.innerHTML = `<span>${list.dataset.moreLabel || 'More'}</span><i aria-hidden="true">↓</i>`;
+
+  moreButton.addEventListener('click', () => {
+    hiddenItems.forEach((item) => {
+      item.hidden = false;
+    });
+    moreButton.setAttribute('aria-expanded', 'true');
+    moreButton.remove();
+  });
+
+  list.insertAdjacentElement('afterend', moreButton);
+});
