@@ -113,6 +113,19 @@
   row-gap: 90px;
   padding-top: 118px;
   padding-bottom: 22px;
+  border-bottom: 0;
+}
+
+#videos {
+  padding-top: 72px;
+  padding-bottom: 64px;
+  border-bottom: 0;
+}
+
+#projects {
+  padding-top: 64px;
+  padding-bottom: 64px;
+  border-bottom: 0;
 }
 
 .section-head > span,
@@ -171,7 +184,9 @@
 }
 
 .resume {
-  border-bottom: 1px solid var(--ink);
+  padding-top: 64px;
+  padding-bottom: 72px;
+  border-bottom: 0;
 }
 
 .site-footer {
@@ -218,7 +233,7 @@
 }
 
 .patents {
-  padding: 100px 0 145px;
+  padding: 64px 0 110px;
   border-bottom: 1px solid var(--ink);
 }
 
@@ -652,13 +667,13 @@
 
 .index-more {
   width: 100%;
-  min-height: 72px;
+  min-height: 56px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 20px 0 0;
   border: 0;
-  border-bottom: 1px solid var(--ink);
+  border-bottom: 0;
   background: transparent;
   color: var(--accent);
   cursor: pointer;
