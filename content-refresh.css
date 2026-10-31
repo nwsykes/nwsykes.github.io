@@ -699,3 +699,11 @@
   outline: 2px solid var(--accent);
   outline-offset: 4px;
 }
+html[data-theme="dark"] .index-list img.insights-list-thumb {
+  filter: none;
+}
+
+.index-list img.insights-list-thumb {
+  object-fit: contain;
+  background: transparent;
+}
