@@ -101,6 +101,20 @@
   margin: 12px auto 0;
 }
 
+.sunday-sketches-page .sunday-cover {
+  width: min(980px, calc(100% - 64px));
+  margin: 12px auto 0;
+  overflow: hidden;
+  background: transparent;
+}
+
+.sunday-sketches-page .sunday-cover-image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1920 / 1204;
+  background: url("./assets/sunday-sketch-header.jpg") center / cover no-repeat;
+}
+
 .sunday-sketches-page .project-editorial {
   padding-top: 30px;
   padding-bottom: 58px;
@@ -116,6 +130,13 @@
 
 .sunday-sketches-page .project-samples-heading {
   margin-bottom: 24px;
+}
+
+.sunday-sketches-page .project-editorial-copy h2,
+.sunday-sketches-page .project-samples-heading h2 {
+  font-size: 22px;
+  line-height: 1;
+  letter-spacing: -0.025em;
 }
 
 .project-samples-stack {
@@ -206,6 +227,10 @@
 }
 
 @media (max-width: 900px) {
+  .sunday-sketches-page .sunday-cover {
+    width: calc(100% - 32px);
+  }
+
   .project-cover--editorial {
     width: calc(100% - 32px);
     margin-top: 30px;
