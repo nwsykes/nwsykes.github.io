@@ -87,7 +87,7 @@ document.querySelectorAll('[data-collapsible-list]').forEach((list, listIndex) =
   moreButton.type = 'button';
   moreButton.setAttribute('aria-controls', listId);
   moreButton.setAttribute('aria-expanded', 'false');
-  moreButton.innerHTML = `<span>${list.dataset.moreLabel || 'More'}</span><i aria-hidden="true">↓</i>`;
+  moreButton.innerHTML = `<span>${list.dataset.moreLabel || 'More'}</span><i class="material-symbols-outlined" aria-hidden="true">keyboard_double_arrow_down</i>`;
 
   moreButton.addEventListener('click', () => {
     hiddenItems.forEach((item) => {
